@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block content %}
+        {% if video.video %}
+        <video style="width: 50%; height: 50%;" controls>
+                <source src="{{video.video.url}}" type="video/mp4">       
+        </video>
+        {% else %}
+        <p class="text-light">
+            Film Henüz Yüklenmedi
+        </p>
+        {% endif %}
+
+{% endblock content %}
